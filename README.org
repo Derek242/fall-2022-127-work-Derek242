@@ -1,8 +1,8 @@
 * Fall 2022 - 127 - Work
-* Name: 
+* Name: Derek Ni
 
-* GitHub username: 
+* GitHub username: Derek2421
 
-* Notes:
+* Notes: Why is there a cow
 
 * Create folders and files as specified per assignment
