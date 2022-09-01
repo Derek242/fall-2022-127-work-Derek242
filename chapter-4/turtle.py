@@ -4,11 +4,23 @@ wn = turtle.Screen()
 
 crush = turtle.Turtle()
 
-crush.forward(100)
-crush.right(90)
-crush.forward(50)
+for i in [0, 1, 2, 3]:
+  crush.forward(90)
+  crush.right(90)
 
-wh.exitonclick()
+  
+#create second turtle
+
+squirt = turtle.Turtle()
+
+for i in [0, 1, 2]:
+  squirt.forward(90)
+  squrt.right(45)
+
+
+wn.exitonclick()
 wn.mainloop()
+
+
 
   
