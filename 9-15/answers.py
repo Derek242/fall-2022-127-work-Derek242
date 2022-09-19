@@ -49,3 +49,26 @@ def make_out_word(out, word):
 #firstTwo
 def first_two(str):
  return str[0:2] 
+
+
+def initialize(name):
+  result = ""
+  first = name[0]
+  first = first.upper()
+  result = result + first + ". "
+  location = name.find(' ')
+  last = name[location+1:].capitalize()
+  result = result + last
+  return result
+print(initialize("derek ni"))
+
+
+
+  
+def bondify(name):
+    """
+    input: a string in the form "first last"
+    returns: a string in the form "Last, First Last"
+    """
+    
+
