@@ -15,11 +15,17 @@ print(bondify("derek ni"))
 
 def piglatin(word):
     first = word[0].lower()
-    if(first == "a" or first == "e" or first == "i" or first == "o" or first == "u"):
-        return word + "yay"
+    length = len(word)
+    p = word[length-1]
+    if(first in 'aeiou'):
+      if(word[length-1] in '.,?!'):
+        word = word[0:length - 1] + 'yay' + p
+        return word.capitalize()
     else:
-        return word[1:] + word[0] + "ay"
+      word = word[1:length-1] + word[0].lower() + 'ay' + p
+      return word.capitalize()
 
+print(piglatin('Piglatin!'))
+print(piglatin('Firefighter.'))
+print(piglatin("Hello?"))
 print(piglatin("amen"))
-print(piglatin("hello"))
-print(piglatin("piglatin"))
