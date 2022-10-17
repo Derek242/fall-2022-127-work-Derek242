@@ -88,7 +88,7 @@ def sum_of_odds(l):
 
 print(sum_of_odds(lis))
 
-#12
+#12 
 def count_sam(l):
   counter = 0
 for i in l:
