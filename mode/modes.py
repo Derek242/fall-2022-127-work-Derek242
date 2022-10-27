@@ -22,4 +22,18 @@ def freq(l,v):
   return count
 
 print(freq(lis,value))
-    
+
+
+modeSoFar = dataset[0]
+freqSoFar = freq(dataset,modeSoFar)
+for item in dataset[1:]:
+  modeSoFar = item
+  freqSoFar = freq(dataset, item)
+return modeSoFar
+
+def testMode(size, maxV):
+  dataset = builtRandom(size, maxV)
+  print(dataset)
+  m = mode(dataset)
+  print(m)
+  
