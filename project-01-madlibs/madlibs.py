@@ -3,11 +3,11 @@ import random
 
 #opens files and returning them in variables
 
-verbs = open("verbs.dat")
-nouns = open("nouns.dat")
-hero = open("hero.dat")
-lines = open("lines.dat")
-adj = open("adjective.dat")
+verbs = open('verb.dat')
+nouns = open('nouns.dat')
+hero = open('hero.dat')
+lines = open('lines.dat')
+adj = open('adjective.dat')
 adv = open('adverb.dat')
 
 #reads the files
@@ -20,14 +20,14 @@ advR = adv.read()
 
 #seperating every word into a string
 verbL = verbsR.split()
-nounsL = nounsL.split()
+nounsL = nounsR.split()
 heroL = heroR.split()
 adjL = adjR.split()
 advL = advR.split()
 
 def madlibs():
   #splitting the line and creating a variable for the new story
-  linesL = lines.split()
+  linesL = linesR.split()
   newL = ''
   hero_name = random.choice(heroL)
   for l in linesL:
@@ -41,6 +41,9 @@ def madlibs():
       newL += (" "+random.choice(adjL))    
     elif l == "<ADVERB>":
       newL += (" "+random.choice(advL))  
+    else:
+        newL += (' '+l)
   print(newL)
 
 madlibs()
+
