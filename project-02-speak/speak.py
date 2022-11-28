@@ -16,23 +16,10 @@ for i in speech2:
 
 def dictionary(dict):
     story = []
-    i=0
-    for k in pirate2:
-        if k in dict.keys():
+    for i in pirate2:
+        if i in dict.keys():
             story.append(dict[i])
         else:
             story.append(i)
-        if story[k] == story[0]:
-            story[k] = story[k].capitalize()
-        elif "." in story[k-1]:
-            story[k] = story[k].captialize()
-        elif "!" in story[k-1]:
-            story[k] = story[k].captialize()
-        elif "?" in story[k-1]:
-            story[k] = story[k].captialize()
-        elif ";" in story[k-1]:
-            story[k] = story[k].captialize()
-    i += 1
-    return ' '.join(story)
-    
+    return 
 print("Pirate Speech: " + dictionary(dict_pirate))
