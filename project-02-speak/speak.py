@@ -12,27 +12,27 @@ speech2 = sentences.split()
 dict_pirate = {}
 for i in speech2:
     semi = i.find(':')
-    dict_pirate.update({i[0:semi]:i[semi+1:]})
+    dict.update({i[0:semi]:i[semi+1:]})
 
 def dictionary(dict):
     story = []
     i=0
-    for i in pirate2:
-        if i in dict.keys():
-            story.append(dictionary[i])
+    for k in pirate2:
+        if k in dict.keys():
+            story.append(dict[i])
         else:
             story.append(i)
-        if story[i] == story[0]:
-            story[i] = story[i].capitalize()
-        elif "." in story[i-1]:
-            story[i] = story[i].captialize()
-        elif "!" in story[i-1]:
-            story[i] = story[i].captialize()
-        elif "?" in story[i-1]:
-            story[i] = story[i].captialize()
-        elif ";" in story[i-1]:
-            story[i] = story[i].captialize()
-    i+= 1
+        if story[k] == story[0]:
+            story[k] = story[k].capitalize()
+        elif "." in story[k-1]:
+            story[k] = story[k].captialize()
+        elif "!" in story[k-1]:
+            story[k] = story[k].captialize()
+        elif "?" in story[k-1]:
+            story[k] = story[k].captialize()
+        elif ";" in story[k-1]:
+            story[k] = story[k].captialize()
+    i += 1
     return ' '.join(story)
     
 print("Pirate Speech: " + dictionary(dict_pirate))
