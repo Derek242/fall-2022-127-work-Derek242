@@ -1,4 +1,4 @@
-#Extras: One more analysis on dataset and a bar graph for the ratio (sugar:calories)
+#3 Extras: 2 more analysis on dataset and a bar graph for first cereal brands
 # import stuff
 import random
 import pandas as pd
@@ -28,18 +28,30 @@ def cereal_sugar():
       number_of_cereal+=1
     print("The average amount of sugar in Cereal is: " , (total_sugars)/(number_of_cereal))
 
+def cereal_ratings():
+    number_of_cereal = 0
+    total_rating = 0
+    for i in cereal_stuff["rating"]:
+      total_rating = total_rating + i
+      number_of_cereal+=1
+    print("The average rating of all Cereal is: " , (total_rating)/(number_of_cereal))
+
 cereal_sugar()
 cereal_cals()
+cereal_ratings()
 
 #Chart for calorie data
-
+all_cereal_names = cereal_stuff["name"]
+first_five_names = all_cereal_names.head()
 all_cereal_cals = cereal_stuff["calories"]
-all_cereal_sugars = cereal_stuff["sugars"]
-first_five_cals = all_cereal_cals.head
-first_five_sugars = all_cereal_sugars.head
+first_five_cals = all_cereal_cals.head()
 
-def fatass(cals):
-    
-    plot.bar()
+def bars():
+  size = plot.figure(figsize = (10,5))
+  plot.bar((first_five_names),(first_five_cals),color = 'orange',width = 1)
+  plot.xlabel("Cereal Brands")
+  plot.ylabel("Amount of Calories")
+  plot.title("Cereals")
+  plot.show()
 
-    return 
+bars()
