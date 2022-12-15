@@ -18,8 +18,6 @@ def cereal_cals():
       total_cals = total_cals + i
       number_of_cereal+=1
     print("The average amount of calories in Cereal is: " , (total_cals)/(number_of_cereal))
-
-
 def cereal_sugar():
     number_of_cereal = 0
     total_sugars = 0
@@ -27,7 +25,6 @@ def cereal_sugar():
       total_sugars = total_sugars + i
       number_of_cereal+=1
     print("The average amount of sugar in Cereal is: " , (total_sugars)/(number_of_cereal))
-
 def cereal_ratings():
     number_of_cereal = 0
     total_rating = 0
@@ -35,7 +32,6 @@ def cereal_ratings():
       total_rating = total_rating + i
       number_of_cereal+=1
     print("The average rating of all Cereal is: " , (total_rating)/(number_of_cereal))
-
 cereal_sugar()
 cereal_cals()
 cereal_ratings()
@@ -53,5 +49,4 @@ def bars():
   plot.ylabel("Amount of Calories")
   plot.title("Cereals")
   plot.show()
-
 bars()
